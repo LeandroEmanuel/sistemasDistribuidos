@@ -44,8 +44,10 @@ export class TodoController {
     })
     todo: Omit<Todo, ''>,
   ): Promise<Todo> {
+	  
 		let todoId = await this.todoRepository.findOne({order:['id DESC']});
 		
+		//se o ultimo registo da bd não for null
 		if(todoId != null){
 			//console.log(todoId.id);
 			
