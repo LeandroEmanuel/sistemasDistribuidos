@@ -37,7 +37,7 @@ export class TodoController {
         'application/json': {
           schema: getModelSchemaRef(Todo, {
             title: 'NewTodo',
-            //exclude: ['id'],
+            exclude: ['id'],
           }),
         },
       },
